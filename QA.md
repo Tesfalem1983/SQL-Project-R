@@ -35,7 +35,12 @@ What are your risk areas? Identify and describe them.
         SELECT DISTINCT productsku FROM  sales_by_sku;
         SELECT COUNT(*) FROM sales_report;
         SELECT DISTINCT productsku FROM sales_report;
-    # Checking for Null values in a different columns in a table(Will just mention example)
-        
+    # Checking for Null values or other undesired values in a different columns in a table(Will just mention example):
+        SELECT country FROM all_sessions WHERE country = '(not set)'
+    # Checking columns that have significuan number of null values(by comparing the number of rows returned vs the total rows of the table)
+        SELECT itemquantity FROM all_sessions WHERE itemquantity is Null;
+
+
+
 
 
